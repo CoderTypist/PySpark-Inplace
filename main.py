@@ -20,12 +20,12 @@ def main():
     
     print('Convert categorical variables into numbers')
     indexer = InplaceStringIndexer(inputCols=categorical)
-    df_indexed = indexer.fit_transform(df_data, df_data)
+    df_indexed = indexer.fit_transform(df_data)
     df_indexed.show()
     
     print('One-hot encode categorical variables')
     encoder = InplaceOneHotEncoder(inputCols=categorical)
-    df_encoded = encoder.fit_transform(df_indexed, df_indexed)
+    df_encoded = encoder.fit_transform(df_indexed)
     df_encoded.show()
 
     print('Group independent features together')
