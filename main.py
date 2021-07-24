@@ -5,8 +5,6 @@ import pyspark
 from pyspark.ml.regression import LinearRegression
 from pyspark.sql import SparkSession
 
-from pyspark.ml.feature import IndexToString
-
 def main():
     
     spark = SparkSession.builder.appName('Inplace_Example').getOrCreate()
