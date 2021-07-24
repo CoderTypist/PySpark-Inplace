@@ -64,7 +64,11 @@ class InplaceVariableCols(ABC):
         
         else:
             self.fit(df_fit)
-            return self.transform(df_transform)
+            
+            if df_transform:
+                return self.transform(df_transform)
+            else:
+                return self.transform(df_fit)
         
 
 class InplaceStringIndexer(InplaceVariableCols):
