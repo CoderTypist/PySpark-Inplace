@@ -19,7 +19,7 @@ An abstract class that contains the implementation for a transformer for whom ei
 |---|---|
 |ABC|Abstract class|
 
-## \_\_init\_\_()
+## InplaceVariableCols.\_\_init\_\_()
 _def \_\_init\_\_(self, inputCol=None, inputCols=None):_
 
 Constructor
@@ -31,7 +31,7 @@ Constructor
 |inputCols=None|Columns to transform|
 
 __returns:__ _None_
-## init\_processor()
+## InplaceVariableCols.init\_processor()
 _def init\_processor(self):_
 
 Abstract method in which subclasses must initialize the transformer to use.
@@ -41,7 +41,7 @@ Abstract method in which subclasses must initialize the transformer to use.
 |self||
 
 __returns:__ _None_
-## fit()
+## InplaceVariableCols.fit()
 _def fit(self, df: pyspark.sql.dataframe.DataFrame) -> None:_
 
 Fits the transformer to the data.
@@ -52,7 +52,7 @@ Fits the transformer to the data.
 |df: pyspark.sql.dataframe.DataFrame|Fit the transformer using this data.|
 
 __returns:__ _None_
-## transform()
+## InplaceVariableCols.transform()
 _def transform(self, df: pyspark.sql.dataframe.DataFrame) -> pyspark.sql.dataframe.DataFrame:_
 
 Transform the incoming DataFrame
@@ -63,7 +63,7 @@ Transform the incoming DataFrame
 |df: pyspark.sql.dataframe.DataFrame|Data to transform|
 
 __returns:__ _pyspark.sql.dataframe.DataFrame_:&nbsp; Transformed data
-## fit\_transform()
+## InplaceVariableCols.fit\_transform()
 _def fit\_transform(self, df\_fit, df\_transform=None) -> pyspark.sql.dataframe.DataFrame:_
 
 Fit and transform the data. Fit and transform using the same DataFrame if df\_transform is not specified.
@@ -84,7 +84,7 @@ Does the same thing as StringIndexer, but inplace.
 |---|---|
 |InplaceVariableCols|Allows for the arguments 'inputCol' or 'inputCols'|
 
-## init\_processor()
+## InplaceStringIndexer.init\_processor()
 _def init\_processor(self) -> StringIndexer:_
 
 Initializes the StringIndexer.
@@ -103,7 +103,7 @@ Does the same thing as OneHotEncoder, but inplace.
 |---|---|
 |InplaceVariableCols|Allows for the arguments 'inputCol' or 'inputCols'|
 
-## init\_processor()
+## InplaceOneHotEncoder.init\_processor()
 _def init\_processor(self) -> OneHotEncoder:_
 
 Initializes the OneHotEncoder.
@@ -118,7 +118,7 @@ _class InplaceVectorAssembler:_
 
 XXX
 
-## \_\_init\_\_()
+## InplaceVectorAssembler.\_\_init\_\_()
 _def \_\_init\_\_(self, inputCols, outputCol='Features'):_
 
 Constructor
@@ -130,7 +130,7 @@ Constructor
 |outputCol='Features'|Name of the output column.|
 
 __returns:__ _None_
-## transform()
+## InplaceVectorAssembler.transform()
 _def transform(self, df) -> pyspark.sql.dataframe.DataFrame:_
 
 Combine the inputCols into a single feature column.
