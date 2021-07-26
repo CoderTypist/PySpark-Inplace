@@ -116,7 +116,7 @@ __returns:__ _OneHotEncoder_:&nbsp; new OneHotEncoder
 ## InplaceVectorAssembler
 _class InplaceVectorAssembler:_
 
-XXX
+Merge multiple feature columns into a single feature column. This does the same thing as a VectorAssembler, but in place. 
 
 ## InplaceVectorAssembler.\_\_init\_\_()
 _def \_\_init\_\_(self, inputCols, outputCol='Features'):_
