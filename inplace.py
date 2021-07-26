@@ -83,7 +83,7 @@ class InplaceStringIndexer(InplaceVariableCols):
         
 class InplaceOneHotEncoder(InplaceVariableCols):
     
-    def init_processor(self) -> StringIndexer:
+    def init_processor(self) -> OneHotEncoder:
         
         if self.single:
             return OneHotEncoder(inputCol=self.inputCol, outputCol=self.outputCol)
